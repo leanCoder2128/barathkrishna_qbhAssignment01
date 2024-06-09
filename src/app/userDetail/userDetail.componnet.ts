@@ -29,7 +29,6 @@ export class UserDetailComponent implements OnInit, OnDestroy {
     });
 
     this.editUserSvc.getUserDetail.subscribe((res) => {
-      console.log(res, 'res');
       this.isUpdate = res ? true : false;
       this.userDetailForm.patchValue(res as userDetailDto);
     });
