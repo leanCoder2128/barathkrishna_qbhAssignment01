@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'qbhAssignment01';
+
+  notificationOptions = {
+    timeOut: 1500,
+    showProgressBar: true,
+    pauseOnHover: true,
+    clickToClose: true,
+    // animate: 'fromRight',
+  };
 }

@@ -1,0 +1,39 @@
+<div class="user-detail-main-layout">
+  <h4 class="userDetail_header">Welcome! Enter your details</h4>
+  <form [formGroup]="userDetailForm" >
+    <div>
+      <mat-form-field [floatLabel]="'auto'">
+        <mat-label>Name</mat-label>
+        <input formControlName="name" matInput placeholder="Name" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field [floatLabel]="'auto'">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput placeholder="Email" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field [floatLabel]="'auto'">
+        <mat-label>Phone Number</mat-label>
+        <input formControlName="phoneNumber" matInput placeholder="Phone Number" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field [floatLabel]="'auto'">
+        <mat-label>Address</mat-label>
+        <textarea formControlName="address" matInput required></textarea>
+      </mat-form-field>
+    </div>
+  </form>
+
+  <div class="action_button">
+    <button type="button" mat-raised-button color="accent" (click)="resetForm()">Reset</button>
+    <button type="submit" mat-raised-button color="primary" (click)="submitUserDetail()">{{isUpdate ? 'Update' : 'Submit'}}</button>
+  </div>
+</div>
+
+<div class="view_user_detail_main_layout ">
+
+  <app-view-user-detail></app-view-user-detail>
+</div>
